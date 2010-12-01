@@ -34,7 +34,7 @@
 			<classpath location="${classes.dir}"/>
 			<classpath refid="junit.classpath"/>
 			<formatter type="brief" usefile="false"/>
-			<test name="######## Platzhalter ##########"/>
+			<test name="testSuite"/>
 			<formatter type="xml"/>
 			<batchtest fork="yes" todir="${reports.xml.dir}">
 				<fileset dir="${test.dir}">
