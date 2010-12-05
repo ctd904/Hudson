@@ -25,11 +25,10 @@ public class HTMLTree {
 	
 	@Override
 	public int hashCode() {
-		int result = 17;
-		//TODO FIXEN !!!
-		// Comments patchen das zwar, aber gefixt ist das noch lange nicht
-		// außerdem wollen wir ja kein Codeghetto :-)
-//		result = 31 * result + child.hashCode();
+		int result = 17,x=0;
+		for(x=0;x<child.size();x++){
+			result = 31 * result + child.get(x).getTag().hashCode();
+		}
 		result = 31 * result + Tag.hashCode();
 		return result;
 	}
