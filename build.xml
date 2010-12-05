@@ -8,7 +8,7 @@
 			<include name="**/*.jar"/>
 		</fileset>
 	</path>
-	<target name="init" description="Prepare needed directories">
+	<target name="init" depends="clean" description="Prepare needed directories">
 		<mkdir dir="${classes.dir}"/>
 		<mkdir dir="${reports.xml.dir}"/>
 		<mkdir dir="${reports.html.dir}"/>
@@ -38,7 +38,7 @@
 			<formatter type="xml"/>
 			<batchtest fork="yes" todir="${reports.xml.dir}">
 				<fileset dir="${test.dir}">
-					<include name="**/*Test.java"/>
+					<include name="**/test*.java"/>
 				</fileset>
 			</batchtest>
 		</junit>
