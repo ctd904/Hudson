@@ -28,4 +28,5 @@ public class SimpleMySQLConnect {
 		}
 		return conn;
 	}
+	
 }
