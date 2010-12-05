@@ -12,7 +12,11 @@ public class testSimpleMySQLConnect {
 		cut = new SimpleMySQLConnect();
 	}
 	@Test
-	public void testSimpleParse() {
+	public void testExistDriver() {
 		assertTrue(cut.existDriver());
+	}
+	@Test
+	public void testConnect() throws InstantiationException, IllegalAccessException, ClassNotFoundException {
+		assertTrue((cut.Connect("localhost", "mysql", "root", "")!=null));
 	}
 }
